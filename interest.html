@@ -47,7 +47,7 @@
         margin-top: 40px;
     }
 
-    /* 🎬 Video Styling */
+    
     .video-wrapper {
         max-width: 900px;
         margin: 30px auto 50px;
@@ -64,7 +64,7 @@
         box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
 
-    /* 🖼 Masonry Gallery */
+  
     .masonry-gallery {
         column-count: 3;
         column-gap: 15px;
@@ -79,6 +79,23 @@
         display: block;
     }
 
+    
+    .interest-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Left wider, right smaller */
+        gap: 40px;
+        margin-top: 20px;
+        align-items: start;
+    }
+
+    /* Make achievements box look neat (optional but minimal) */
+    .achievements-box {
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
     @media (max-width: 768px) {
         main {
             width: 95%;
@@ -86,6 +103,11 @@
 
         .masonry-gallery {
             column-count: 2;
+        }
+
+        /* Stack into one column */
+        .interest-grid {
+            grid-template-columns: 1fr;
         }
     }
 </style>
@@ -118,42 +140,51 @@
     </p>
 
     
-    <section class="video-wrapper">
-        <h2>Photography Moments</h2>
-        <video controls preload="metadata" poster="images/video-poster.png">
-            <source src="video/drone.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
+    <div class="interest-grid">
 
-  
-    <section>
-        <h2>Photography Works</h2>
-        <div class="masonry-gallery">
-            <img src="images/IMG1.jpg" alt="A lovely vertical portrait of the couple">
-            <img src="images/IMG2.jpg" alt="An intimate shot of the couple's wedding">
-            <img src="images/IMG3.jpg" alt="A candid moment during the reception">
-            <img src="images/IMG4.jpg" alt="A detailed shot of the bride preparation">
-            <img src="images/IMG5.jpg" alt="A shot of couples in location">
-            <img src="images/IMG6.jpg" alt="A shot of couple in street photography concept">
-            <img src="images/IMG7.jpg" alt="A funky shot of the couple">
-            <img src="images/IMG8.jpg" alt="A romantic shot with emotion">
-            <img src="images/IMG9.jpg" alt="A shot of rings">
-            <img src="images/IMG10.jpg" alt="A funny couple pose">
-            <img src="images/IMG11.jpg" alt="A masterpiece shot">
-            <img src="images/IMG12.JPG" alt="A couple in love">
+        <!-- LEFT COLUMN -->
+        <div>
+            <section class="video-wrapper">
+                <h2>Videography Porfolio</h2>
+                <video controls preload="metadata" poster="images/video-poster.png">
+                    <source src="video/drone.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+
+            <section>
+                <h2>Photography Works</h2>
+                <div class="masonry-gallery">
+                    <img src="images/IMG1.jpg" alt="A lovely vertical portrait of the couple">
+                    <img src="images/IMG2.jpg" alt="An intimate shot of the couple's wedding">
+                    <img src="images/IMG3.jpg" alt="A candid moment during the reception">
+                    <img src="images/IMG4.jpg" alt="A detailed shot of the bride preparation">
+                    <img src="images/IMG5.jpg" alt="A shot of couples in location">
+                    <img src="images/IMG6.jpg" alt="A shot of couple in street photography concept">
+                    <img src="images/IMG7.jpg" alt="A funky shot of the couple">
+                    <img src="images/IMG8.jpg" alt="A romantic shot with emotion">
+                    <img src="images/IMG9.jpg" alt="A shot of rings">
+                    <img src="images/IMG10.jpg" alt="A funny couple pose">
+                    <img src="images/IMG11.jpg" alt="A masterpiece shot">
+                    <img src="images/IMG12.JPG" alt="A couple in love">
+                </div>
+            </section>
         </div>
-    </section>
 
-    
-    <section>
-        <h2>Achievements</h2>
-        <ol>
-            <li>Participate in Canon PhotoMarathon 2022 - 2024</li>
-            <li>MyWeds Best of The Week Photo Winner 2023</li>
-            <li>PVHX Production - The Best Photographer in Artistic Category 2015</li>
-        </ol>
-    </section>
+       
+        <div class="achievements-box">
+            <section>
+                <h2>Achievements</h2>
+                <ol>
+                    <li>Participate in Canon PhotoMarathon 2022 - 2024</li>
+                    <li>MyWeds Best of The Week Photo Winner 2023</li>
+                    <li>PVHX Production - The Best Photographer in Artistic Category 2015</li>
+                </ol>
+            </section>
+        </div>
+
+    </div>
+  
 
 </main>
 

@@ -7,32 +7,39 @@
 <meta name="keywords" content="cv, portfolio, resume">
 <meta name="author" content="professional">
 <meta name="description" content="Azree Yaacob">
+
 <style>
     body { font-family: Arial; margin: 0; }
     header img { width: 100%; height: 250px; object-fit: cover; }
     nav { background: #333; padding: 12px; text-align: center; }
     nav a { color: white; margin: 0 15px; text-decoration: none; }
-    
-    /* Main container back to left-aligned */
+
     main { width: 80%; margin: auto; padding: 20px; text-align: left; }
-    
-    /* Standard list styling */
+
     ul { padding-left: 20px; }
-    section p { text-align: justify; } 
-    
-    /* Uniform Tool Logo Styling */
+    section p { text-align: justify; }
+
+    /* ===== TWO COLUMN LAYOUT ===== */
+    .career-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Left wider than right */
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    /* ===== TOOL LOGOS ===== */
     .tool-container {
         margin-top: 15px;
         display: flex;
         flex-wrap: wrap;
         gap: 15px;
-        justify-content: center; /* This centers the images inside the container */
-        margin-left: -20px;      /* Offsets the list padding to keep them perfectly centered on the page */
+        justify-content: center;
+        margin-left: -20px;
     }
 
     .tool-box {
-        width: 80px;      
-        height: 80px;     
+        width: 80px;
+        height: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -43,18 +50,34 @@
     }
 
     .tool-box img {
-        max-width: 90%;   
-        max-height: 90%;  
-        object-fit: contain; 
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
     }
 
-    footer { background: #111; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+    /* Responsive: stack columns */
+    @media (max-width: 768px) {
+        main { width: 95%; }
+        .career-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    footer {
+        background: #111;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+    }
 </style>
 </head>
 
 <body>
 
-<header><img src="images/header.png" alt="Career header"></header>
+<header>
+    <img src="images/header.png" alt="Career header">
+</header>
 
 <nav>
     <a href="home.html">Home</a>
@@ -66,41 +89,70 @@
 
 <main>
 
-    <h1>Career</h1>
+<h1>Career</h1>
 
+<div class="career-grid">
+
+    <!-- LEFT COLUMN -->
     <section>
         <h2>Work Experiences</h2>
-        
-        <p>My work experiences career is centered on IT Security Governance and Compliance, where my primary focus is to protect the organization's digital assets by establishing and enforcing strategic security frameworks. I dedicate my skills at FGV Holdings Berhad to bridging the gap between technical security measures and high-level business goals, ensuring our operations maintain a strong cybersecurity posture and meet regulatory mandates.</p>
-        
+
+        <p>
+            My work experiences career is centered on IT Security Governance and Compliance, 
+            where my primary focus is to protect the organization's digital assets by 
+            establishing and enforcing strategic security frameworks. I dedicate my skills 
+            at FGV Holdings Berhad to bridging the gap between technical security measures 
+            and high-level business goals.
+        </p>
+
         <h3>Core Responsibilities and Expertise:</h3>
-        <p>My daily work involves the comprehensive execution of GRC principles, requiring collaboration with IT, legal, and executive teams:</p>
+        <p>
+            My daily work involves the comprehensive execution of GRC principles, 
+            requiring collaboration with IT, legal, and executive teams:
+        </p>
+
         <ul>
-            <li><b>Governance & Audit Experiences:</b> My core responsibility is creating and enforcing policies, frameworks (ISO 27001), and procedures to align IT security with business goals.</li>
+            <li>
+                <b>Governance & Audit Experiences:</b>
+                Creating and enforcing policies, frameworks (ISO 27001), and procedures 
+                to align IT security with business goals.
+            </li>
             <br>
-            <li><b>Security Posture Assessment Experiences:</b> Performed comprehensive security assessments across host, database, web and network environments by identifying, exploiting, and documenting vulnerabilities using <b>Burp Suite, Metasploit, Nmap, and Nessus</b> following standardized methodologies like OWASP to provide actionable risk-mitigation strategies.
+            <li>
+                <b>Security Posture Assessment Experiences:</b>
+                Performed comprehensive security assessments across host, database, web 
+                and network environments using <b>Burp Suite, Metasploit, Nmap, and Nessus</b>
+                following OWASP methodologies.
                 
                 <div class="tool-container">
                     <div class="tool-box"><img src="images/burpsuite.png" alt="Burp Suite"></div>
                     <div class="tool-box"><img src="images/metasploit.png" alt="Metasploit"></div>
                     <div class="tool-box"><img src="images/nmap.png" alt="Nmap"></div>
-                    <div class="tool-box"><img src="images/ISMS.png" alt="iso27001"></div>
+                    <div class="tool-box"><img src="images/ISMS.png" alt="ISO 27001"></div>
                 </div>
             </li>
         </ul>
     </section>
 
+    <!-- RIGHT COLUMN -->
     <section>
         <h2>Project Experiences</h2>
-        <p>My involvement in projects demonstrate my hands-on ability to apply theoretical knowledge to practical solutions, often bridging the gap between security and development:</p>
+
+        <p>
+            My involvement in projects demonstrate my hands-on ability to apply theoretical 
+            knowledge to practical solutions, often bridging the gap between security and development:
+        </p>
+
         <ul>
             <li>Lead Security Governance, LHDNM Myinvois</li>
             <li>Lead Change Management, ICCS Mindef</li>
             <li>Lead Auditor ISMS</li>
-            <li>Steering Committe FGV Cybersecurity Roadmap Program</li>
-            <li>Steering Committe for FGV Cloud Migration</li>
+            <li>Steering Committee FGV Cybersecurity Roadmap Program</li>
+            <li>Steering Committee for FGV Cloud Migration</li>
         </ul>
     </section>
+
+</div>
 
 </main>
 
