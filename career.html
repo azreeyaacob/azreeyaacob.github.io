@@ -8,15 +8,47 @@
 <meta name="author" content="professional">
 <meta name="description" content="Azree Yaacob">
 <style>
-    body{font-family:Arial;margin:0;}
-    header img{width:100%;height:250px;object-fit:cover;}
-    nav{background:#333;padding:12px;text-align:center;}
-    nav a{color:white;margin:0 15px;text-decoration:none;}
-    main{width:80%;margin:auto;padding:20px;}
+    body { font-family: Arial; margin: 0; }
+    header img { width: 100%; height: 250px; object-fit: cover; }
+    nav { background: #333; padding: 12px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; }
     
+    /* Main container back to left-aligned */
+    main { width: 80%; margin: auto; padding: 20px; text-align: left; }
+    
+    /* Standard list styling */
     ul { padding-left: 20px; }
+    section p { text-align: justify; } 
     
-    footer{background:#111;color:white;text-align:center;padding:15px;margin-top:40px;}
+    /* Uniform Tool Logo Styling */
+    .tool-container {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center; /* This centers the images inside the container */
+        margin-left: -20px;      /* Offsets the list padding to keep them perfectly centered on the page */
+    }
+
+    .tool-box {
+        width: 80px;      
+        height: 80px;     
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 5px;
+    }
+
+    .tool-box img {
+        max-width: 90%;   
+        max-height: 90%;  
+        object-fit: contain; 
+    }
+
+    footer { background: #111; color: white; text-align: center; padding: 15px; margin-top: 40px; }
 </style>
 </head>
 
@@ -37,14 +69,24 @@
     <h1>Career</h1>
 
     <section>
-        <h2>Profesional Journey</h2>
+        <h2>Work Experiences</h2>
         
-        <p>My professional career is centered on IT Security Governance and Compliance, where my primary focus is to protect the organization's digital assets by establishing and enforcing strategic security frameworks. I dedicate my skills at FGV Holdings Berhad to bridging the gap between technical security measures and high-level business goals, ensuring our operations maintain a strong cybersecurity posture and meet regulatory mandates.</p>
+        <p>My work experiences career is centered on IT Security Governance and Compliance, where my primary focus is to protect the organization's digital assets by establishing and enforcing strategic security frameworks. I dedicate my skills at FGV Holdings Berhad to bridging the gap between technical security measures and high-level business goals, ensuring our operations maintain a strong cybersecurity posture and meet regulatory mandates.</p>
         
         <h3>Core Responsibilities and Expertise:</h3>
         <p>My daily work involves the comprehensive execution of GRC principles, requiring collaboration with IT, legal, and executive teams:</p>
         <ul>
-            <li><b>Policy & Frameworks:</b>  My core responsibility is creating and enforcing policies, frameworks (ISO 27001), and procedures to align IT security with business goals.</li>
+            <li><b>Governance & Audit Experiences:</b> My core responsibility is creating and enforcing policies, frameworks (ISO 27001), and procedures to align IT security with business goals.</li>
+            <br>
+            <li><b>Security Posture Assessment Experiences:</b> Performed comprehensive security assessments across host, database, web and network environments by identifying, exploiting, and documenting vulnerabilities using <b>Burp Suite, Metasploit, Nmap, and Nessus</b> following standardized methodologies like OWASP to provide actionable risk-mitigation strategies.
+                
+                <div class="tool-container">
+                    <div class="tool-box"><img src="images/burpsuite.png" alt="Burp Suite"></div>
+                    <div class="tool-box"><img src="images/metasploit.png" alt="Metasploit"></div>
+                    <div class="tool-box"><img src="images/nmap.png" alt="Nmap"></div>
+                    <div class="tool-box"><img src="images/ISMS.png" alt="iso27001"></div>
+                </div>
+            </li>
         </ul>
     </section>
 

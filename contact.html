@@ -17,7 +17,7 @@
 
 <body>
 
-<header><img src="images/contact.jpg" alt="Contact header"></header>
+<header><img src="images/header.png" alt="Contact header"></header>
 
 <nav>
   <a href="home.html">Home</a>
@@ -31,18 +31,21 @@
 
   <h1>Get in Touch</h1>
 
-  <form>
-    <label>Name</label>
-    <input type="text" placeholder="Your name">
-
-    <label>Email</label>
-    <input type="email" placeholder="Your email">
-
-    <label>Message</label>
-    <textarea rows="5" placeholder="Your message"></textarea>
-
-    <button type="submit">Send</button>
-  </form>
+ <form
+  action="https://formspree.io/f/xpqaabrj"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 
 </main>
 

@@ -33,6 +33,15 @@
     margin-bottom: 30px;
   }
 
+  .audio-wrapper {
+    margin: 30px auto;
+    max-width: 500px;
+  }
+
+  audio {
+    width: 100%;
+  }
+
   .enter-btn {
     display: inline-block;
     background-color: #333;
@@ -67,7 +76,16 @@
   <h1>Welcome to Azree Personal Website</h1>
   <p>This is my simple landing page. Click the button below to enter.</p>
 
-   <a href="home.html" class="enter-btn">Enter Website</a>
+  
+  <div class="audio-wrapper">
+    <p><strong>Theme Audio</strong></p>
+    <audio controls preload="metadata">
+      <source src="audio/vibes.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <a href="home.html" class="enter-btn">Enter Website</a>
 </main>
 
 <footer>

@@ -4,34 +4,86 @@
 <meta charset="UTF-8">
 <title>Interests</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-   
-    body{font-family:Arial;margin:0;}
-    header img{width:100%;height:250px;object-fit:cover;}
-    nav{background:#333;padding:12px;text-align:center;}
-    nav a{color:white;margin:0 15px;text-decoration:none;}
-    main{width:80%;margin:auto;padding:20px;}
-    
-    ul { padding-left: 20px; }
-    
-    footer{background:#111;color:white;text-align:center;padding:15px;margin-top:40px;}
 
-    
+<style>
+    body {
+        font-family: Arial;
+        margin: 0;
+    }
+
+    header img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    nav {
+        background: #333;
+        padding: 12px;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+    }
+
+    main {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    footer {
+        background: #111;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+    /* 🎬 Video Styling */
+    .video-wrapper {
+        max-width: 900px;
+        margin: 30px auto 50px;
+        text-align: center;
+    }
+
+    .video-wrapper h2 {
+        margin-bottom: 15px;
+    }
+
+    video {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    /* 🖼 Masonry Gallery */
     .masonry-gallery {
         column-count: 3;
-        column-gap: 15px; 
+        column-gap: 15px;
         margin-top: 15px;
     }
 
     .masonry-gallery img {
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
         break-inside: avoid;
-        margin-bottom: 15px; 
-        display: block; 
+        margin-bottom: 15px;
+        display: block;
     }
 
     @media (max-width: 768px) {
+        main {
+            width: 95%;
+        }
+
         .masonry-gallery {
             column-count: 2;
         }
@@ -41,23 +93,42 @@
 
 <body>
 
-<header><img src="images/header.png" alt="Interests header"></header>
+<header>
+    <img src="images/header.png" alt="Interests header">
+</header>
 
 <nav>
-    <a href="home.html">Home</a>
-    <a href="education.html">Education</a>
-    <a href="career.html">Career</a>
-    <a href="interest.html">Interest</a>
-    <a href="contact.html">Contact</a>
+    <a href="home.html">Home</a>
+    <a href="education.html">Education</a>
+    <a href="career.html">Career</a>
+    <a href="interest.html">Interest</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
 <main>
 
-    <h1>Interests</h1>
-        <p>The moment I picked up a camera, I knew I wasn't just taking pictures, I was collecting memories. Photography, for me, is deeply personal. It's about recognizing that fleeting, perfect instant and preserving it forever. When I photograph a wedding, I see more than just a ceremony; I see the culmination of a unique love story, the nervous excitement, the shared laughter, and the quiet, meaningful glances. I approach every wedding day not just as a professional, but as someone genuinely invested in capturing the real, raw emotion of your journey.</p>
+    <h1>Interests</h1>
+    <p>
+        The moment I picked up a camera, I knew I wasn't just taking pictures, I was collecting memories.
+        Photography, for me, is deeply personal. It's about recognizing that fleeting, perfect instant
+        and preserving it forever. When I photograph a wedding, I see more than just a ceremony;
+        I see the culmination of a unique love story, the nervous excitement, the shared laughter,
+        and the quiet, meaningful glances. I approach every wedding day not just as a professional,
+        but as someone genuinely invested in capturing the real, raw emotion of your journey.
+    </p>
 
-    <section>
-        <h2>Photography Works</h2>
+    
+    <section class="video-wrapper">
+        <h2>Photography Moments</h2>
+        <video controls preload="metadata" poster="images/video-poster.png">
+            <source src="video/drone.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+  
+    <section>
+        <h2>Photography Works</h2>
         <div class="masonry-gallery">
             <img src="images/IMG1.jpg" alt="A lovely vertical portrait of the couple">
             <img src="images/IMG2.jpg" alt="An intimate shot of the couple's wedding">
@@ -72,20 +143,22 @@
             <img src="images/IMG11.jpg" alt="A masterpiece shot">
             <img src="images/IMG12.JPG" alt="A couple in love">
         </div>
-    </section>
+    </section>
 
-    <section>
-        <h2>Achievements</h2>
-                <ol>
-            <li>Participate in Canon PhotoMarathon 2022 - 2024</li>
-            <li>MyWeds Best of The Week Photo Winner 2023</li>
-        </ol>
-    </section>
+    
+    <section>
+        <h2>Achievements</h2>
+        <ol>
+            <li>Participate in Canon PhotoMarathon 2022 - 2024</li>
+            <li>MyWeds Best of The Week Photo Winner 2023</li>
+            <li>PVHX Production - The Best Photographer in Artistic Category 2015</li>
+        </ol>
+    </section>
 
 </main>
 
 <footer>
-    &copy; 2025 Azree Yaacob | Chrome recommended | 1024×768 | Updated: 2025
+    &copy; 2025 Azree Yaacob | Chrome recommended | 1024×768 | Updated: 2025
 </footer>
 
 </body>
